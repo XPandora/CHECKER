@@ -11,7 +11,6 @@ import torch.utils.data as data
 import torchvision.transforms as transforms
 from sklearn.utils import shuffle
 from PIL import Image, ImageOps
-from InferSent.models import InferSent
 
 # use 5-fold cross validation
 K = 5
@@ -64,6 +63,7 @@ class ClickbaitDataset(data.Dataset):
             self.vocab = KeyedVectors.load_word2vec_format(vocab_path)
             self.spacy_en = spacy.load('en')
         elif text_model_type == 'infersent':
+            from InferSent.models import InferSent
             model_version = 1
             MODEL_PATH = text_model_path
             params_model = {'bsize': 64, 'word_emb_dim': 300, 'enc_lstm_dim': 2048,
