@@ -1,9 +1,9 @@
 # Clickbait-Thumbnail-Detection
-Codebase and dataset for clickbait thumbnail detection
+Codebase and dataset for *Detecting Clickbait Thumbnails with Weak Supervision and Co-Teaching*.
 
 ## Data
 - Dataset with feature engineering results is provided in Data/Dataset_with_feature.csv
-- Thumbnails are available at: https://drive.google.com/file/d/1jaJW3atiflkSx_IRhOojh8MefJ9UjyJU/view?usp=sharing
+- Thumbnails will be provided once our paper is published. 
 
 ## Generate Labels:
 You can generate labels using the following command:
