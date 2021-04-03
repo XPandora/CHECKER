@@ -2,7 +2,13 @@
 Codebase and dataset for *Detecting Clickbait Thumbnails with Weak Supervision and Co-Teaching*.
 
 ## Data
-- Dataset with feature engineering results is provided in Data/Dataset_with_feature.csv
+- Dataset with feature engineering results is provided in Data/Dataset_with_feature.csv. Use the following code you can have a brief view:
+
+```python
+import pandas as pd
+df = pd.read_csv('Data/Dataset_with_feature.csv', lineterminator='\n')
+print(df.head())
+```
 - Thumbnails will be provided once our paper is published. 
 
 ## Generate Labels:
