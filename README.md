@@ -1,5 +1,16 @@
-# Clickbait-Thumbnail-Detection
-Codebase and dataset for *Detecting Clickbait Thumbnails with Weak Supervision and Co-Teaching*.
+# CHECKER
+Codebase and dataset for *CHECKER: Detecting Clickbait Thumbnails with Weak Supervision and Co-Teaching*.
+
+## Setups
+
+The basic environment is as follows
+- snorkel==0.9.3
+- pytorch==1.5.0
+- torchvision==0.6.0
+- gensim==4.0.0b0
+- block.bootstrap.pytorch==0.1.6
+
+The used GloVe word vectors can be directly downloaded from: https://drive.google.com/file/d/1R-K4PoPll7GCJ2d92dWcIixQtLJcx7At/view?usp=sharing
 
 ## Data
 - Dataset with feature engineering results is provided in Data/Dataset_with_feature.csv. Use the following code you can have a brief view:
@@ -9,13 +20,15 @@ import pandas as pd
 df = pd.read_csv('Data/Dataset_with_feature.csv', lineterminator='\n')
 print(df.head())
 ```
-- Thumbnails will be provided once our paper is published. 
+- Thumbnails are available at: https://drive.google.com/file/d/1jaJW3atiflkSx_IRhOojh8MefJ9UjyJU/view?usp=sharing
+
 
 ## Generate Labels:
 You can generate labels using the following command:
 ```shell
 python label_generator.py
 ```
+The generated labels would be available at `Data/unlabeled_data/train_generated_label.csv`
 
 ## Model Training:
 You can train model using the following command:
